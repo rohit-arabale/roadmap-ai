@@ -1,0 +1,107 @@
+/* Basic syntax highlighting for CodeBlock component */
+.code-block-wrapper {
+  margin-bottom: 1rem;
+  font-family: 'Fira Code', Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.code-block-wrapper pre {
+  margin: 0;
+  overflow-x: auto;
+}
+
+.code-block-wrapper code {
+  display: block;
+  white-space: pre;
+}
+
+.code-line {
+  min-height: 1.5em;
+}
+
+/* Syntax highlighting colors */
+.language-javascript .token.keyword,
+.language-typescript .token.keyword,
+.language-jsx .token.keyword,
+.language-tsx .token.keyword {
+  color: #ff79c6;
+}
+
+.language-javascript .token.string,
+.language-typescript .token.string,
+.language-jsx .token.string,
+.language-tsx .token.string {
+  color: #f1fa8c;
+}
+
+.language-javascript .token.comment,
+.language-typescript .token.comment,
+.language-jsx .token.comment,
+.language-tsx .token.comment {
+  color: #6272a4;
+}
+
+.language-javascript .token.function,
+.language-typescript .token.function,
+.language-jsx .token.function,
+.language-tsx .token.function {
+  color: #50fa7b;
+}
+
+.language-javascript .token.number,
+.language-typescript .token.number,
+.language-jsx .token.number,
+.language-tsx .token.number {
+  color: #bd93f9;
+}
+
+.language-javascript .token.operator,
+.language-typescript .token.operator,
+.language-jsx .token.operator,
+.language-tsx .token.operator {
+  color: #ff79c6;
+}
+
+.language-javascript .token.variable,
+.language-typescript .token.variable,
+.language-jsx .token.variable,
+.language-tsx .token.variable {
+  color: #f8f8f2;
+}
+
+/* HTML/JSX tags */
+.language-html .token.tag,
+.language-jsx .token.tag,
+.language-tsx .token.tag {
+  color: #ff79c6;
+}
+
+.language-html .token.attr-name,
+.language-jsx .token.attr-name,
+.language-tsx .token.attr-name {
+  color: #50fa7b;
+}
+
+.language-html .token.attr-value,
+.language-jsx .token.attr-value,
+.language-tsx .token.attr-value {
+  color: #f1fa8c;
+}
+
+/* CSS */
+.language-css .token.property {
+  color: #66d9ef;
+}
+
+.language-css .token.value {
+  color: #f8f8f2;
+}
+
+.language-css .token.selector {
+  color: #50fa7b;
+}
+
+.language-css .token.important {
+  color: #ff79c6;
+} 

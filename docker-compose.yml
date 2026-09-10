@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: roadmapai-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: roadmapai
+      POSTGRES_PASSWORD: roadmapai
+      POSTGRES_DB: roadmapai
+    ports:
+      - "5433:5432"
+    volumes:
+      - roadmapai_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U roadmapai"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  roadmapai_pgdata:

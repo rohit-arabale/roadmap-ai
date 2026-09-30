@@ -16,10 +16,6 @@ export function errorHandler(err: unknown, _req: Request, res: Response, _next: 
   if (err instanceof Error) {
     const status = (err as Error & { status?: number; code?: string }).status ?? 500;
     const code = (err as Error & { code?: string }).code;
-    if (code === 'EBADCSRFTOKEN') {
-      res.status(403).json({ success: false, error: 'Invalid CSRF token' });
-      return;
-    }
     if (err.message === 'request entity too large' || code === 'LIMIT_FILE_SIZE' || status === 413) {
       res.status(413).json({ success: false, error: 'Payload too large' });
       return;
